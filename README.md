@@ -1,5 +1,4 @@
-REST api wrapper written in java. 
 
-Work've done somewhere between 2008-2009.
+REST api java client for http://www.textmagic.com/
 
-More information can be found here: https://code.google.com/p/textmagic-sms-api-java/
+Migrated from: https://code.google.com/p/textmagic-sms-api-java/
