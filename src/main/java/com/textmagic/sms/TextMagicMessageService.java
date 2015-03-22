@@ -28,7 +28,8 @@ import java.math.BigDecimal;
  *
  * @author Rafael Bagmanov
  */
-public class TextMagicMessageService implements MessageService {
+public class TextMagicMessageService implements MessageService 
+{
 
     // universal constants
     private static final int MAX_SMS_PARTS_COUNT = 3;
@@ -99,7 +100,8 @@ public class TextMagicMessageService implements MessageService {
      */
     public SentMessage send(String text, String phone) throws ServiceBackendException, ServiceTechnicalException{
         List<SentMessage> list = send(text, Arrays.asList(phone));
-        if (list.size() != 1) {
+        if (list.size() != 1) 
+	{
             throw new ServiceTechnicalException("The server response is unexpected. " +
                     "The response object was not populated with single result: [" + Arrays.toString(list.toArray()) + "]");
         }
@@ -177,7 +179,8 @@ public class TextMagicMessageService implements MessageService {
         if(maxLength > 3 || maxLength < 1) {
             throw new IllegalArgumentException("maxLength value is invalid");
         }
-        if (sendingTime.getTime() < System.currentTimeMillis()) {
+        if (sendingTime.getTime() < System.currentTimeMillis()) 
+{
             throw new IllegalArgumentException("Provided sendingTime value [" + sendingTime.toString() + "] is in the past");
         }
         boolean useUnicode = !GsmCharsetUtil.isLegalString(text);
